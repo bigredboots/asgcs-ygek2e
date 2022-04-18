@@ -38,13 +38,9 @@ export class VertgridComponent implements OnInit {
     this.gridView = this.gridData;
     this.elem = document.getElementById('vertical-grid-container');
 
-    
-
     this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
-
-      
   }
   public listItems: Array<string> = [
     'Last Year',
@@ -57,7 +53,8 @@ export class VertgridComponent implements OnInit {
     text: 'Last Fiscal Year to Present',
   };
 
-  public handleExpand(): void {
+  handleExpand(event) {
+    alert('woo');
     const width: number = window.innerWidth;
     if (width < 768 && this.currentPanelState === SidePanelState.MOBILE) {
       this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);
@@ -69,7 +66,7 @@ export class VertgridComponent implements OnInit {
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
     }
   }
-  
+
   openFullscreen(event) {
     this.elem.classList.add('fullscreened');
     if (this.elem.requestFullscreen) {
