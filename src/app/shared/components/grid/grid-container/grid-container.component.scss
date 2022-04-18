@@ -363,12 +363,13 @@
         position: relative;
         top: -3px;
         transform: rotate(-90deg);
+        transition: $default-transition;
       }
     }
     .bucket-row {
       padding: 0px;
       border: 1px solid #333;
-      height: 10px;
+      height: 140px;
       overflow-x: hidden;
       overflow-y: auto;
       border-radius: 10px 0px 0px 10px;
@@ -395,7 +396,7 @@
   }
   .menu-list ul li {
     list-style: none;
-    font-size: 14px;
+    font-size: 13px;
     background-color: $black;
     position: relative;
     transition: $fast-transition;
@@ -433,6 +434,9 @@
   .menu-list ul .drop-active .title-row::after {
     transform: rotate(0deg);
   }
+  .menu-check:checked ~ .title-row::after {
+    transform: rotate(0deg);
+  }
 }
 :host ::ng-deep .card {
   display: block;
@@ -441,7 +445,7 @@
     background: $black;
     color: $grey-lighter;
     display: block;
-    min-height: 200px;
+    min-height: 180px;
     transition: background 0.5s;
 
     img {
