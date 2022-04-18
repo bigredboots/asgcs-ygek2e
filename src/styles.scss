@@ -522,12 +522,11 @@ h4 {
 .k-slider-track-wrap {
   height: 20px;
 }
-.full-screen {
+.full-screen, .expand-screen {
   background: #009ddb;
   display: flex;
   gap: 5px;
   align-items: center;
-  border-radius: 5px;
   margin-right: 10px;
   padding: 0px 5px;
   cursor: pointer;
@@ -535,6 +534,12 @@ h4 {
   &:hover {
     background: $blue-hover-color;
   }
+}
+.full-screen {
+  border-radius: 0px 5px 5px 0px;
+}
+.expand-screen {
+  border-radius: 5px 0px 0px 5px;
 }
 .full-screen.closed {
   display: none;

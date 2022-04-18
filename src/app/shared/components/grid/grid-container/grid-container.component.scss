@@ -8,6 +8,10 @@
   grid-gap: 20px;
 }
 
+:host ::ng-deep #vertical-grid-container {
+  height: 100%;
+}
+
 :host ::ng-deep [gridCell] {
   display: block;
   padding: 10px 15px;
@@ -470,6 +474,11 @@
 // display: none !important;
 //}
 
+#vertical-grid-container {
+  height: 100%;
+}
+
+
 :host ::ng-deep .card-items {
   display: flex;
   align-items: center;
@@ -523,7 +532,7 @@
     margin-top: 20px;
   }
   .lines {
-    padding: 20px 0px;
+    padding: 10px 0px;
   }
 }
 :host ::ng-deep .search-component {

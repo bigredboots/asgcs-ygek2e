@@ -30,6 +30,12 @@
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5);
   transition: 1.3s cubic-bezier(0.1, 1.1, 0.23, 1.01) all;
-  
+
   opacity: 0;
+}
+:host ::ng-deep .grid-container {
+  grid-template-rows: 200px calc(100vh - 440px);
+}
+:host ::ng-deep  .k-grid {
+  height: 100%
 }
