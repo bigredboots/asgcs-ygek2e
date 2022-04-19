@@ -449,7 +449,7 @@
     background: $black;
     color: $grey-lighter;
     display: block;
-    min-height: 180px;
+    // min-height: 180px;
     transition: background 0.5s;
 
     img {
@@ -477,7 +477,6 @@
 #vertical-grid-container {
   height: 100%;
 }
-
 
 :host ::ng-deep .card-items {
   display: flex;
@@ -625,3 +624,4 @@
     filter: brightness(1.5);
   }
 }
+

@@ -522,12 +522,13 @@ h4 {
 .k-slider-track-wrap {
   height: 20px;
 }
-.full-screen, .expand-screen {
+.full-screen,
+.expand-screen {
   background: #009ddb;
   display: flex;
   gap: 5px;
   align-items: center;
-  margin-right: 10px;
+
   padding: 0px 5px;
   cursor: pointer;
 
@@ -537,9 +538,11 @@ h4 {
 }
 .full-screen {
   border-radius: 0px 5px 5px 0px;
+  margin-right: 10px;
 }
 .expand-screen {
   border-radius: 5px 0px 0px 5px;
+  margin-right: 3px;
 }
 .full-screen.closed {
   display: none;
@@ -1003,4 +1006,65 @@ h4 {
   div.k-grid-header {
     display: none;
   }
+}
+
+.expanded-reports .grid-container {
+  grid-template-rows: auto auto !important;
+}
+.expanded-reports .four-totals {
+  text-align: left;
+  height: auto;
+}
+.expanded-reports .card-element.four-totals .numbers {
+  font-size: 14px;
+}
+.expanded-reports .card-element .lines {
+  display: flex;
+  padding: 1px 0 !important;
+}
+.expanded-reports .card-element.four-totals .title {
+  letter-spacing: 0px;
+  font-weight: 500;
+}
+.expanded-reports .card-element.four-totals .title::after {
+  content: ': ';
+  padding-right: 5px;
+}
+.expanded-reports .menu-list {
+  position: absolute;
+  width: calc(100% - 30px);
+  max-height: 0px;
+  overflow: hidden;
+}
+.default-copy {
+  display: none;
+}
+.expanded-reports .default-copy {
+  display: inline;
+}
+.expanded-reports .expand-copy {
+  display: none;
+}
+.expanded-reports .expanded-report-list {
+  display: block;
+margin-top: 10px;
+font-size: 18px;
+}
+.expanded-reports .expanded-report-list:after {
+  width: 0;
+height: 0;
+border-left: 4px solid transparent;
+border-right: 4px solid transparent;
+border-top: 6px solid #ccc;
+display: inline-block;
+content: "";
+margin-left: 10px;
+position: relative;
+top: -3px;
+transform: rotate(-90deg);
+transition: .3s ease-in all;
+}
+.expanded-reports .expanded-report-list span {
+  color: white;
+  text-decoration: underline;
 }

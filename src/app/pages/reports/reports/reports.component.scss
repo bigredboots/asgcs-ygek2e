@@ -36,6 +36,7 @@
 :host ::ng-deep .grid-container {
   grid-template-rows: 200px calc(100vh - 440px);
 }
-:host ::ng-deep  .k-grid {
-  height: 100%
+:host ::ng-deep .k-grid {
+  height: 100%;
 }
+

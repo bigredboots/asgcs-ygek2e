@@ -4,6 +4,7 @@ import {
   HostListener,
   OnInit,
   ViewChild,
+  ElementRef,
   ViewEncapsulation,
 } from '@angular/core';
 import { SidePanelService } from '../../../core/';
@@ -34,6 +35,9 @@ export class VertgridComponent implements OnInit {
   constructor(private _sidePanelService: SidePanelService) {
     this._subscriptionsSubject$ = new Subject<void>();
   }
+  @ViewChild('expanded') expanded: ElementRef;
+
+
   ngOnInit() {
     this.gridView = this.gridData;
     this.elem = document.getElementById('vertical-grid-container');
@@ -54,7 +58,10 @@ export class VertgridComponent implements OnInit {
   };
 
   handleExpand(event) {
-    alert('woo');
+
+    this.expanded.nativeElement.classList.add('expanded');
+    document.body.classList.toggle('expanded-reports');
+    
     const width: number = window.innerWidth;
     if (width < 768 && this.currentPanelState === SidePanelState.MOBILE) {
       this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);

@@ -6,7 +6,7 @@
   (mouseover)="showTooltip($event)"
 > -->
 
-<div id="vertical-grid-container" class="vertgrid">
+<div id="vertical-grid-container" class="vertgrid" #expanded>
   <kendo-grid
     #mylabel
     id="vertical-grid"
@@ -122,15 +122,15 @@
         </div>
 
         <div class="card-title-buttons">
-<div class="expand-screen k-button" (click)="handleExpand($event)">
-  Expand
-</div>
+          <div class="expand-screen k-button" (click)="handleExpand($event)">
+            <span class="icon"></span><span class="expand-copy">Expand</span><span class="default-copy">Default</span>
+          </div>
 
           <div
             class="opened full-screen k-button"
             (click)="openFullscreen($event)"
           >
-            <span></span>Full Screen
+            Full Screen
           </div>
           <div
             class="closed full-screen k-button"
@@ -165,8 +165,8 @@
                   ></circle>
                 </svg>
               </div>
-              Processing</div
-            >
+              Processing
+            </div>
           </button>
         </div>
       </div>
