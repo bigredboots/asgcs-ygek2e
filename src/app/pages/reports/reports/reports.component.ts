@@ -21,6 +21,9 @@ export class ReportsComponent {
   ReportList() {
     this.reportlist.nativeElement.classList.toggle('report-open');
   }
+  ReportListLeave() {
+    this.reportlist.nativeElement.classList.remove('report-open');
+  }
   FDemandMoreInfo() {
     this.fdemandoverview.nativeElement.classList.toggle('drop-active');
   }

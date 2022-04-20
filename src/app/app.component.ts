@@ -43,10 +43,10 @@ export class AppComponent implements OnInit {
     window.scroll(0, 0);
 
     // sets an idle timeout of 30 seconds.
-    this.idle.setIdle(30);
+    this.idle.setIdle(300);
 
     // sets an  timer for 30 seconds.
-    this.idle.setTimeout(30);
+    this.idle.setTimeout(300);
 
     // sets the default interrupts, in this case, things like clicks, scrolls, touches to the document
     this.idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);

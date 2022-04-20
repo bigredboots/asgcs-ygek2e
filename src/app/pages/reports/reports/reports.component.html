@@ -17,12 +17,14 @@
       <div class="expanded-report-list" (click)="ReportList()">
         Choose a report <span></span>
       </div>
-      <div class="menu-list" (mouseleave)="ReportList()">
-      <div class="expanded search-component">
-        <input type="text" class="search-reports" placeholder="Find" />
-        <button class="submit">Submit</button>
-      </div>
+      <div class="menu-list" (mouseleave)="ReportListLeave()">
         <ul class="bucket-row">
+          <li class="search-field">
+            <div class="expanded search-component">
+              <input type="text" class="search-reports" placeholder="Find" />
+              <button class="submit">Submit</button>
+            </div>
+          </li>
           <li>
             <input type="checkbox" class="menu-check" id="demand-drop" />
             <label class="title-row menu-label" for="demand-drop">Demand</label>
@@ -44,18 +46,6 @@
               </li>
               <li>
                 <a>Demand Activity</a>
-              </li>
-              <li>
-                <a>Demand Special One</a>
-              </li>
-              <li>
-                <a>Demand Special Two</a>
-              </li>
-              <li>
-                <a>Demand Special Three</a>
-              </li>
-              <li>
-                <a>Demand Special Four</a>
               </li>
             </ul>
           </li>
@@ -79,41 +69,6 @@
                   [routerLink]="['/outboundReportsLocations']"
                   [routerLinkActive]="['is-active']"
                   >Outbound Locations</a
-                >
-              </li>
-              <li>
-                <a
-                  [routerLink]="['/outboundReportsProfile']"
-                  [routerLinkActive]="['is-active']"
-                  >Outbound Profile</a
-                >
-              </li>
-              <li>
-                <a
-                  [routerLink]="['/outboundReportsTotaldemand']"
-                  [routerLinkActive]="['is-active']"
-                  >Outbound Special Uno</a
-                >
-              </li>
-              <li>
-                <a
-                  [routerLink]="['/outboundReportsTotaldemand']"
-                  [routerLinkActive]="['is-active']"
-                  >Outbound Special Dos</a
-                >
-              </li>
-              <li>
-                <a
-                  [routerLink]="['/outboundReportsTotaldemand']"
-                  [routerLinkActive]="['is-active']"
-                  >Outbound Special Tres</a
-                >
-              </li>
-              <li>
-                <a
-                  [routerLink]="['/outboundReportsTotaldemand']"
-                  [routerLinkActive]="['is-active']"
-                  >Outbound Special Quatro</a
                 >
               </li>
             </ul>
