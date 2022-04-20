@@ -1032,7 +1032,7 @@ h4 {
 }
 .expanded-reports .menu-list {
   position: absolute;
-  width: 350px;
+  width: 250px;
   max-height: 0px;
   overflow: hidden;
   transition: $default-transition;
@@ -1086,8 +1086,8 @@ h4 {
   display: inline-block;
   content: '';
   margin-left: 6px;
-position: relative;
-top: -2px;
+  position: relative;
+  top: -2px;
   transform: rotate(-90deg);
   transition: $default-transition
 }
@@ -1117,7 +1117,7 @@ top: -2px;
   max-height: 300px;
   z-index: 10;
   transition: $default-transition;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 .expanded-reports .report-open .expanded-report-list:after {
   transform: rotate(0deg);

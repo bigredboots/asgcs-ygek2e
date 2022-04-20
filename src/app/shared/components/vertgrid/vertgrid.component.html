@@ -45,6 +45,7 @@
             </span>
           </div>
         </div>
+
         <div class="dates-block">
           <kendo-dropdownlist
             [data]="listItems"
@@ -58,72 +59,10 @@
           </div>
         </div>
 
-        <div class="filter-block vertgrid">
-          <div class="filters">
-            <span class="filter-title">Filters: </span>
-          </div>
-          <div class="overview-filters">
-            <div class="filter-container">
-              <div class="block-filters">
-                <div class="filter-item">
-                  <div class="filter-label">Status</div>
-                  <span class="k-dropdown-wrap">
-                    <span class="k-input">Select</span>
-                    <span class="k-select">
-                      <span class="k-icon k-i-arrow-s"></span>
-                    </span>
-                  </span>
-                </div>
-                <div class="filter-item">
-                  <div class="filter-label">Dates</div>
-                  <span class="k-dropdown-wrap">
-                    <span class="k-input">Select</span>
-                    <span class="k-select"
-                      ><span class="k-icon k-i-arrow-s"></span
-                    ></span>
-                  </span>
-                </div>
-
-                <div class="filter-item">
-                  <div class="filter-label">Type</div>
-                  <span class="k-dropdown-wrap">
-                    <span class="k-input">Select</span>
-                    <span class="k-select"
-                      ><span class="k-icon k-i-arrow-s"></span
-                    ></span>
-                  </span>
-                </div>
-
-                <div class="filter-item">
-                  <div class="filter-label">Sites</div>
-                  <span class="k-dropdown-wrap"
-                    ><span class="k-input">Select</span>
-                    <span class="k-select"
-                      ><span class="k-icon k-i-arrow-s"></span></span
-                  ></span>
-                </div>
-
-                <div class="filter-item">
-                  <div class="filter-label">Supplier</div>
-                  <span class="k-dropdown-wrap">
-                    <span class="k-input">Select</span>
-                    <span class="k-select"
-                      ><span class="k-icon k-i-arrow-s"></span
-                    ></span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="block-filterbuttons">
-            <button kendobutton="" class="secondary">Reset</button>
-            <button kendobutton="" class="blue">Apply</button>
-          </div>
-        </div>
-
         <div class="card-title-buttons">
           <div class="expand-screen k-button" (click)="handleExpand($event)">
-            <span class="icon"></span><span class="expand-copy">Expand</span><span class="default-copy">Default</span>
+            <span class="icon"></span><span class="expand-copy">Expand</span
+            ><span class="default-copy">Default</span>
           </div>
 
           <div
@@ -170,29 +109,31 @@
           </button>
         </div>
       </div>
+      <div class="filter-block vertgrid">
+        <div class="filters">
+          <span class="filter-title">Filters: </span>
+        </div>
+        <div class="overview-filters">
+          <div class="filter-container">
+            <div class="block-filters">
+              <div class="filter-item">
+                <div class="filter-label">Status</div>
+                <span class="k-dropdown-wrap">
+                  <span class="k-input">Select</span>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-filterbuttons">
+          <button kendobutton="" class="secondary">Reset</button>
+          <button kendobutton="" class="blue">Apply</button>
+        </div>
+      </div>
     </ng-template>
-
-    <!-- <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">
-      <ng-template kendoGridCellTemplate let-dataItem>
-        <h4>CPN: {{ dataItem.id }}</h4>
-        <dl>
-          <dt>Order Type</dt>
-          <dd>{{ dataItem.gender }}</dd>
-
-          <dt>Customer</dt>
-          <dd>{{ dataItem.full_name }}</dd>
-
-          <dt>Job Title</dt>
-          <dd>{{ dataItem.job_title }}</dd>
-
-          <dt>Country</dt>
-          <dd>{{ dataItem.country }}</dd>
-
-          <dt>Budget</dt>
-          <dd>{{ dataItem.budget | currency }}</dd>
-        </dl>
-      </ng-template>
-    </kendo-grid-column> -->
 
     <kendo-grid-column
       media="(min-width: 501px)"
