@@ -12,17 +12,15 @@ export class ReportsComponent {
   @ViewChild('fsupplyoverview') fsupplyoverview: ElementRef;
   @ViewChild('finboundoverview') finboundoverview: ElementRef;
 
+  @ViewChild('reportlist') reportlist: ElementRef;
   @ViewChild('reloadnumbers') reloadnumbers: ElementRef;
 
   closeOverlayer() {
     document.body.classList.remove('excel-modal-open');
-
-    // setTimeout(function () {
-    //   this.fadebigmodal.nativeElement.classList.remove('bigmodal-fade');
-    // }, 3000);
-    // clearTimeout();
   }
-
+  ReportList() {
+    this.reportlist.nativeElement.classList.toggle('report-open');
+  }
   FDemandMoreInfo() {
     this.fdemandoverview.nativeElement.classList.toggle('drop-active');
   }
@@ -42,7 +40,5 @@ export class ReportsComponent {
   ReloadThings() {
     this.finboundoverview.nativeElement.classList.add('twirl');
   }
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 }

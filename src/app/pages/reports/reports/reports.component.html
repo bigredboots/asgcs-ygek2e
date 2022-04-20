@@ -1,6 +1,11 @@
 <div class="page-container">
   <app-grid-container>
-    <div gridCell gcColSpan="2" class="reportcell nochart card card-body">
+    <div
+      gridCell
+      gcColSpan="2"
+      class="reportcell nochart card card-body"
+      #reportlist
+    >
       <div class="card-title left">
         <div class="custom-reports card-title-text">Report List</div>
         <!-- <div class="my-reports card-title-text">My Reports</div> -->
@@ -9,10 +14,14 @@
           <button class="submit">Submit</button>
         </div>
       </div>
-      <div class="expanded-report-list">
-        Current Report: <span>Default Report</span>
+      <div class="expanded-report-list" (click)="ReportList()">
+        Choose a report
       </div>
-      <div class="menu-list">
+      <div class="menu-list" (mouseleave)="ReportList()">
+      <div class="expanded search-component">
+        <input type="text" class="search-reports" placeholder="Find" />
+        <button class="submit">Submit</button>
+      </div>
         <ul class="bucket-row">
           <li>
             <input type="checkbox" class="menu-check" id="demand-drop" />
@@ -242,23 +251,37 @@
       </div> -->
     </div>
 
-    <div gridCell class="card card-body">
+    <div gridCell class="reportsummary card card-body">
       <div class="card-title">
         <div class="card-title-text">Summary</div>
-
       </div>
       <div class="card-element four-totals" #reloadnumbers>
         <div class="component-loader">
-      <div class="app-loader">
-      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-      </svg>
-      <span class="load-text">LOADING</span>
-    </div>
-    <div class="loader-text">This component is taking more than 3 seconds to show data and this helpful text appears.</div>
+          <div class="app-loader">
+            <svg
+              class="spinner"
+              width="65px"
+              height="65px"
+              viewBox="0 0 66 66"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                class="path"
+                fill="none"
+                stroke-width="6"
+                stroke-linecap="round"
+                cx="33"
+                cy="33"
+                r="30"
+              ></circle>
+            </svg>
+            <span class="load-text">LOADING</span>
+          </div>
+          <div class="loader-text">
+            This component is taking more than 3 seconds to show data and this
+            helpful text appears.
+          </div>
         </div>
-
-
 
         <div class="lines">
           <div class="title">Order Count</div>
@@ -284,12 +307,29 @@
   </app-grid-container>
 </div>
 <div class="excelloader modal-window">
-<div class="app-loader">
-  <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-  <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-  </svg>
-  <span class="load-text">LOADING</span>
-</div>
-  <div class="loader-text">We are Processing your request. Your Excel will be automatically downloaded after processing.</div>
+  <div class="app-loader">
+    <svg
+      class="spinner"
+      width="65px"
+      height="65px"
+      viewBox="0 0 66 66"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        class="path"
+        fill="none"
+        stroke-width="6"
+        stroke-linecap="round"
+        cx="33"
+        cy="33"
+        r="30"
+      ></circle>
+    </svg>
+    <span class="load-text">LOADING</span>
+  </div>
+  <div class="loader-text">
+    We are Processing your request. Your Excel will be automatically downloaded
+    after processing.
+  </div>
   <button class="blue" (click)="closeOverlayer($event)">Close</button>
 </div>
