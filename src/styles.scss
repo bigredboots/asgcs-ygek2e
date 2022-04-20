@@ -1062,16 +1062,27 @@ h4 {
 }
 .expanded-reports .expanded-report-list {
   display: block;
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 5px;
+  font-size: 14px;
   cursor: pointer;
+  background: #ccc;
+  color: black;
+  padding: 0px 5px;
+  border-radius: 5px;
+  width: fit-content;
+}
+.expanded-reports .expanded-report-list span {
+  content: '';
+  border-left: 1px solid black;
+  width: 1px;
+  height: 20px;
 }
 .expanded-reports .expanded-report-list:after {
   width: 0;
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid #ccc;
+  border-top: 6px solid black;
   display: inline-block;
   content: '';
   margin-left: 10px;
@@ -1088,6 +1099,9 @@ h4 {
   position: unset !important;
   grid-area: span 1 / span 1 !important;
 }
+.expanded-reports .reportcell .search-component {
+  display: none;
+}
 .expanded-reports .reportsummary {
   grid-area: span 1 / span 2 !important;
 }
@@ -1095,7 +1109,6 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 10px;
 }
 .expanded-reports .report-open .menu-list {
   max-height: 300px;

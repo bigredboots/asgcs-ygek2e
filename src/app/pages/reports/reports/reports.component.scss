@@ -12,7 +12,7 @@
 .menu-check:checked ~ ul {
   max-height: 1000px;
 }
-
+.expanded.search-component {display: none;}
 .modal-window {
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -30,7 +30,6 @@
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5);
   transition: 1.3s cubic-bezier(0.1, 1.1, 0.23, 1.01) all;
-
   opacity: 0;
 }
 :host ::ng-deep .grid-container {
