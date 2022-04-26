@@ -150,6 +150,16 @@
       <div class="filter-block vertgrid">
         <div class="filter-container">
           <div class="block-filters">
+          <div class="filter-item search-component">
+          <div class="filter-label">Search</div>
+          <input
+            type="text"
+            class="search-filter"
+            placeholder="+3 Characters"
+          />
+          <button class="submit">Submit</button>
+        </div>
+
             <div class="main-filter-buttons">
               <div class="filter-item">
                 <div class="filter-label">Example Filter Title 1</div>
@@ -166,13 +176,10 @@
                   </span>
                 </span>
               </div>
+
               <div class="filter-item">
-                <div class="filter-label">Example Filter Name</div>
-                <span
-                  #multiselectContainer
-                  class="k-dropdown-wrap "
-                  [class.active]="value && value.length > 0"
-                >
+                <div class="filter-label">Example Filter Title 2</div>
+                <span #multiselectContainer>
                   <kendo-multiselect
                     #multiselect
                     kendoMultiSelectSummaryTag
@@ -184,19 +191,65 @@
                   </span>
                 </span>
               </div>
-              <div class="filter-item search-component">
-                <div class="filter-label">Search</div>
-                <input
-                  type="text"
-                  class="search-filter"
-                  placeholder="+3 Characters"
-                />
-                <button class="submit">Submit</button>
-              </div>
+
               <div class="filter-item">
-                <div class="expand-filters" (click)="toggleExpandedFilters()">
-                  <span class="filterblock">All Filters</span>
-                </div>
+                <div class="filter-label">Example Filter Title 3</div>
+                <span #multiselectContainer>
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                  >
+                  </kendo-multiselect>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-label">Example Filter Title 4</div>
+                <span #multiselectContainer>
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                  >
+                  </kendo-multiselect>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-label">Example Filter Title 5</div>
+                <span #multiselectContainer>
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                  >
+                  </kendo-multiselect>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-label">Example Filter Title 6</div>
+                <span #multiselectContainer>
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                  >
+                  </kendo-multiselect>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
