@@ -79,6 +79,8 @@
     .block-filters {
       display: flex;
       gap: 12px;
+      flex-direction: column;
+      width: 100%;
     }
     .block-filterbuttons {
       margin-top: 14px;
@@ -89,6 +91,7 @@
     .main-filter-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      gap: 0px 20px;
     }
     .reports-header {
       display: flex;
@@ -103,6 +106,7 @@
   }
   .filter-block {
     display: flex;
+    width: 100%;
   }
   &#vertical-grid-container .dates-block {
     display: block;
