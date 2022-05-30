@@ -15,11 +15,11 @@
   &:hover {
     background: $blue-hover-color;
   }
-  
+
   &.open {
     max-height: 200px;
     max-width: 160px;
-  
+
     transition: max-width 0.3s ease-out, max-height 0.5s ease-out 0.2s;
   }
   a {
@@ -81,4 +81,23 @@
 .buttonjump.open .jump-title::after {
   transform: rotate(0deg);
 }
-
+.content {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.content.flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+}

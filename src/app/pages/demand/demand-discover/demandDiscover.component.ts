@@ -14,6 +14,7 @@ export class DemandDiscoverComponent {
   @ViewChild('iprofilemoreinfo') iprofilemoreinfo: ElementRef;
   @ViewChild('activitymoreinfo') activitymoreinfo: ElementRef;
   @ViewChild('dactivitymoreinfo') dactivitymoreinfo: ElementRef;
+  @ViewChild('flipcard') flipcard: ElementRef;
 
   @ViewChild('reportsopen') reportsopen: ElementRef;
 
@@ -40,6 +41,12 @@ export class DemandDiscoverComponent {
   DReportsOpen() {
     this.reportsopen.nativeElement.classList.toggle('open');
   }
+
+  flipcarded() {
+    this.flipcard.nativeElement.classList.toggle('flipped');
+  }
+
+
 }
 
 export const breadCrumbConstant = `Demand > Discover`;

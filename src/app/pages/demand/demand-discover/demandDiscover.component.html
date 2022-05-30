@@ -24,27 +24,21 @@
           </div>
         </div>
         <div class="card-icons" #mapmoreinfo>
-          <a
-            class="maximize-icon"
-            [routerLink]="['/demandReportsLocations']"
-          ></a>
-          <!-- <div class="moreinfo-icon" (click)="FMapMoreInfo()"></div> -->
+          <button class="blue table-button" (click)="flipcarded()">
+            View Table
+          </button>
         </div>
       </div>
-      <img
-        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots.jpg"
-      />
-      <!-- <div class="moreinfo-block" #imapmoreinfo>
-        <div class="moreinfo-header">
-          The content is related to the Master set of filters on the top.<br /><br />
-          AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
-          visual on the top will not follow along. ONCE you manipulate again the
-          Master Top Filters, this grid will reset and start over. "Saved
-          Preferences" is a feature coming soon. In the meantime, your
-          adjustments will stay during your browing sesson (reseted once you
-          refresh the browser, the website or log-out).
+      <div class="content" #flipcard>
+        <div class="front">
+          <img
+            src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots.jpg"
+          />
         </div>
-      </div> -->
+        <div class="back">
+          <app-mapgrid></app-mapgrid>
+        </div>
+      </div>
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
