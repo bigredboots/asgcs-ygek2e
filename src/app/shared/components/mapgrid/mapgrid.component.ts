@@ -14,7 +14,7 @@ import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 @Component({
   selector: 'app-mapgrid',
   templateUrl: './mapgrid.component.html',
-  styleUrls: ['./ mapgrid.component.scss'],
+  styleUrls: ['./mapgrid.component.scss'],
 
   encapsulation: ViewEncapsulation.None,
 })
