@@ -38,41 +38,42 @@
               <span class="newchoice">New Selected Date</span>
             </div>
             <div class="select-options" (mouseleave)="closedatechoice()">
+            <div class="date-selectors custom" #customslide>
+            Custom Date
+            <a
+              style="font-size: 10px; padding-left: 5px; color: #009ddc"
+              href="https://jsfiddle.net/bigredboots/z1oxt7nf/"
+              target="_blank"
+              >See Functionality here
+            </a>
+            <div class="date-slider">
+              <div class="sliderimg" (click)="sliderApply()"></div>
+            </div>
+            <div class="date-output">
+              <div class="date-choice">
+                <span>12/12/2021</span> to <span>04/19/2022</span>
+              </div>
+              <button
+                class="slider-apply blue"
+                (click)="changedatechoice()"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
               <div class="date-selectors" (click)="changedatechoice()">
-                +/- Week
+                +/- Week Choices from BRD
               </div>
               <div class="date-selectors" (click)="changedatechoice()">
-                +/- Month
+                +/- Month Choices from BRD
               </div>
               <div class="date-selectors" (click)="changedatechoice()">
-                +/- Quarter
+                +/- Quarter Choices from BRD
               </div>
               <div class="date-selectors" (click)="changedatechoice()">
-                +/- Year
+                +/- Year Choices from BRD
               </div>
-              <div class="date-selectors custom" #customslide>
-                Custom Date
-                <a
-                  style="font-size: 10px; padding-left: 5px; color: #009ddc"
-                  href="https://jsfiddle.net/bigredboots/z1oxt7nf/"
-                  target="_blank"
-                  >See Functionality here
-                </a>
-                <div class="date-slider">
-                  <div class="sliderimg" (click)="sliderApply()"></div>
-                </div>
-                <div class="date-output">
-                  <div class="date-choice">
-                    <span>12/12/2021</span> to <span>04/19/2022</span>
-                  </div>
-                  <button
-                    class="slider-apply blue"
-                    (click)="changedatechoice()"
-                  >
-                    Apply
-                  </button>
-                </div>
-              </div>
+              
             </div>
           </div>
 

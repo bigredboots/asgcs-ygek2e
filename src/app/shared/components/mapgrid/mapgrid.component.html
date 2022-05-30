@@ -31,11 +31,11 @@
       <div class="openblock-area"></div>
     </div>
   </ng-template>
-  <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">
+  <!-- <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">
     <ng-template kendoGridCellTemplate let-dataItem>
-      <h4>CPN: {{ dataItem.id }}</h4>
+      <h4>Owner {{ dataItem.id }}</h4>
       <dl>
-        <dt>Order Type</dt>
+        <dt>Distinct Suppliers</dt>
         <dd>{{ dataItem.gender }}</dd>
 
         <dt>Grand Total</dt>
@@ -51,14 +51,13 @@
         <dd>{{ dataItem.budget | currency }}</dd>
       </dl>
     </ng-template>
-  </kendo-grid-column>
+  </kendo-grid-column> -->
 
   <kendo-grid-column
     media="(min-width: 501px)"
     field="gender"
-    title="Order Type"
+    title="Owner"
     [width]="140"
-    [locked]="true"
   >
     <ng-template kendoGridCellTemplate let-dataItem>
       {{ dataItem.gender }}
@@ -67,9 +66,8 @@
   <kendo-grid-column
     media="(min-width: 501px)"
     field="id"
-    title="Grand Total"
-    [width]="140"
-    [locked]="true"
+    title="Distinct Suppliers"
+    [width]="190"
   >
     <ng-template kendoGridCellTemplate let-dataItem>
       {{ dataItem.id }}
@@ -79,7 +77,7 @@
   <kendo-grid-column
     media="(min-width: 501px)"
     field="full_name"
-    title="20 Dec 2021"
+    title="Distinct PNs"
     [width]="130"
   >
     <ng-template kendoGridCellTemplate let-dataItem>
@@ -90,7 +88,7 @@
   <kendo-grid-column
     media="(min-width: 501px)"
     field="job_title"
-    title="27 Dec 2021"
+    title="Avg. Aging"
     [width]="130"
   >
     <ng-template kendoGridCellTemplate let-dataItem>
@@ -98,105 +96,12 @@
     </ng-template>
   </kendo-grid-column>
   <kendo-grid-column
-    media="(min-width: 501px)"
-    field="country"
-    title="3 Jan 2021"
-    [width]="130"
-    [class]="{ 'text-center': true }"
-    [resizable]="true"
-  >
-    <ng-template kendoGridCellTemplate let-dataItem>
-      {{ dataItem.country }}
-    </ng-template>
-  </kendo-grid-column>
-  <kendo-grid-column
     field="is_online"
     media="(min-width: 501px)"
-    title="10 Jan 2021"
+    title="Value > 180D" 
     [width]="130"
     [class]="{ 'text-center': true }"
-    [resizable]="true"
-  >
-    <ng-template kendoGridCellTemplate let-dataItem>
-      <span *ngIf="dataItem.is_online === true" class="good">On Time</span>
-      <span *ngIf="dataItem.is_online === false" class="late">-28D late</span>
-    </ng-template>
-  </kendo-grid-column>
-  <kendo-grid-column
-    field="rating"
-    title="17 Jan 2021"
-    media="(min-width: 501px)"
-    [width]="130"
-    [resizable]="true"
-  >
-    <ng-template kendoGridCellTemplate let-dataItem>
-      {{ dataItem.rating }}
-    </ng-template>
-  </kendo-grid-column>
-  <kendo-grid-column
-    field="target"
-    media="(min-width: 501px)"
-    title="24 Jan 2021"
-    [width]="130"
-    [resizable]="true"
-  >
-  <ng-template kendoGridCellTemplate let-dataItem>
-    {{ dataItem.rating }}
-  </ng-template>
-</kendo-grid-column>
-<kendo-grid-column
-  field="target"
-  media="(min-width: 501px)"
-  title="31 Jan 2021"
-  [width]="130"
-  [resizable]="true"
->
-<ng-template kendoGridCellTemplate let-dataItem>
-  {{ dataItem.rating }}
-</ng-template>
-</kendo-grid-column>
-<kendo-grid-column
-field="target"
-media="(min-width: 501px)"
-title="7 Feb 2021"
-[width]="130"
-[resizable]="true"
->
-    <ng-template kendoGridCellTemplate let-dataItem>
-      {{ dataItem.target }}
-    </ng-template>
-  </kendo-grid-column>
-  <kendo-grid-column
-    field="budget"
-    media="(min-width: 501px)"
-    title="14 Feb 2021"
-    [width]="130"
-  >
-    <ng-template kendoGridCellTemplate let-dataItem>
-      <span [ngClass]="{ 'red text-bold': dataItem.budget < 0 }">{{
-        dataItem.budget | currency
-      }}</span>
-    </ng-template>
-  </kendo-grid-column>
-  <kendo-grid-column
-    media="(min-width: 501px)"
-    field="phone"
-    title="6 Mar 2021"
-    [width]="130"
   >
   </kendo-grid-column>
-  <kendo-grid-column
-    media="(min-width: 501px)"
-    field="address"
-    title="31 Mar 2021"
-    [width]="130"
-  >
-  </kendo-grid-column>
-
-  <kendo-grid-pdf
-    fileName="Employees.pdf"
-    [repeatHeaders]="true"
-  ></kendo-grid-pdf>
-  <kendo-grid-excel fileName="Employees.xlsx"></kendo-grid-excel>
 </kendo-grid>
 <!-- </div> -->

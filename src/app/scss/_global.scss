@@ -9,6 +9,7 @@ button {
   padding: 3px 8px;
   cursor: pointer;
   transition: $default-transition;
+  outline: 0;
 
   &.secondary {
     background: $white;
