@@ -16,7 +16,7 @@ import { DonutComponent } from './components/charts/donut-chart/donut-chart.comp
 import { VertgridComponent } from './components/vertgrid/vertgrid.component';
 import { VertgridaltComponent } from './components/vertgridalt/vertgridalt.component';
 import { HorizgridComponent } from './components/horizgrid/horizgrid.component';
-import { MapGridComponent } from './components/mapgrid/mapgrid.component';
+import { MapgridComponent } from './components/mapgrid/mapgrid.component';
 import { DonutComponentAlt } from './components/charts/donut-chart-alt/donut-chart-alt.component';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 
@@ -41,7 +41,7 @@ import {
     VertgridComponent,
     VertgridaltComponent,
     HorizgridComponent,
-    MapGridComponent,
+    MapgridComponent,
     NavigationBarComponent,
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
@@ -69,7 +69,7 @@ import {
     VertgridComponent,
     VertgridaltComponent,
     HorizgridComponent,
-    MapGridComponent,
+    MapgridComponent,
     GridContainerComponent,
     GridCellDirective,
     NavigationBarComponent,

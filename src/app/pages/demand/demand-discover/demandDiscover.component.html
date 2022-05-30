@@ -7,29 +7,28 @@
       class="card card-body"
       (mouseleave)="FMapMoreInfoClose()"
     >
-      <div class="card-title">
-        <div class="left-side-content">
-          <div class="card-title-text">Demand locations</div>
-          <div class="filter-item">
-            <span class="k-dropdown-wrap">
-              <span class="k-input">Display<span>$USD</span></span>
-              <span class="k-select">
-                <span class="k-icon k-i-arrow-s"></span>
-              </span>
-            </span>
-          </div>
-          <div>
-            <span class="map-from">FROM:</span>
-            <span class="map-to">TO:</span>
-          </div>
-        </div>
-        <div class="card-icons" #mapmoreinfo>
-          <button class="blue table-button" (click)="flipcarded()">
-            View Table
-          </button>
-        </div>
-      </div>
       <div class="content" #flipcard>
+        <div class="card-title">
+          <div class="left-side-content">
+            <div class="card-title-text">Demand locations</div>
+            <div class="left-side-map">
+              <div class="filter-item">
+                <span class="k-dropdown-wrap">
+                  <span class="k-input">Display<span>$USD</span></span>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
+              </div>
+              <span class="map-from">FROM:</span>
+              <span class="map-to">TO:</span>
+            </div>
+          </div>
+          
+        </div>
+        <button class="blue flipcard" (click)="flipcarded()">
+        View <span class="table">Table</span><span class="map">Map</span>
+        </button>
         <div class="front">
           <img
             src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots.jpg"
@@ -138,23 +137,11 @@
             class="maximize-icon"
             [routerLink]="['/demandReportsLocations']"
           ></a>
-          <!-- <div class="moreinfo-icon" (click)="DProfileMoreInfo()"></div> -->
         </div>
       </div>
       <img
         src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/stackbarchart2.jpg"
       />
-      <!-- <div class="moreinfo-block" #iprofilemoreinfo>
-        <div class="moreinfo-header">
-          The content is related to the Master set of filters on the top.<br /><br />
-          AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
-          visual on the top will not follow along. ONCE you manipulate again the
-          Master Top Filters, this grid will reset and start over. "Saved
-          Preferences" is a feature coming soon. In the meantime, your
-          adjustments will stay during your browing sesson (reseted once you
-          refresh the browser, the website or log-out).
-        </div>
-      </div> -->
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">

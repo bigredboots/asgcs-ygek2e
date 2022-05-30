@@ -323,7 +323,7 @@ app-navigation-bar {
 }
 .k-grid-toolbar {
   border-radius: 10px 10px 0 0;
-  background: #000;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   padding: 0px 0px 10px;
@@ -768,24 +768,13 @@ h4 {
     &:hover {
       border-width: 1px;
     }
-    &.table-button {
-      font-size: 12px;
-      padding: 3px 5px;
-    }
   }
 }
 .card-title-buttons {
   display: flex;
   border: 1px;
 }
-// .k-button.full-screen {
-//   display: inline-flex;
-//   border: 1px;
-// }
-// .k-button.full-screen.closed {
-//   display: none;
-//   border: 1px;
-// }
+
 
 .filter-modal .k-input {
   font-size: 16px;

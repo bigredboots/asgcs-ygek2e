@@ -86,18 +86,58 @@
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
-}
-.content.flipped {
-  transform: rotateY(180deg);
-  transition: transform 0.5s;
+
+  button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 12px;
+    padding: 3px 5px;
+    z-index: 1;
+  }
+  button .map {
+    display: none;
+  }
 }
 .front,
 .back {
-  position: absolute;
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  transition: transform 0.5s;
 }
 .back {
   transform: rotateY(180deg);
+  position: absolute;
+  top: 0px;
+}
+.left-side-map {
+  display: flex;
+}
+
+.content.flipped {
+  .left-side-map {
+    display: none;
+  }
+  .front {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+
+    .flipcard {
+      transform: rotateY(180deg);
+      left: 0px;
+      right: auto;
+      outline: 0;
+    }
+    button .map {
+      display: inline;
+    }
+    button .table {
+      display: none;
+    }
+  }
+}
+.content.flipped .back {
+  transform: rotateY(0deg);
+  transition: transform 0.5s;
 }

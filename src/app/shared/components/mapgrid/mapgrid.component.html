@@ -23,12 +23,12 @@
   (pageChange)="pageChange($event)"
 >
   <ng-template kendoGridToolbarTemplate>
-    <div class="card-title-text">Map Grid Title</div>
     <div class="card-title-buttons">
       <kendo-grid-column-chooser></kendo-grid-column-chooser>
       <button kendoGridExcelCommand type="button" icon="file-excel">
         Export to Excel
       </button>
+      <div class="openblock-area"></div>
     </div>
   </ng-template>
   <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">

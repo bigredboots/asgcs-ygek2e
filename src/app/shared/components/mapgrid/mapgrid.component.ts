@@ -26,7 +26,7 @@ export class MapgridComponent implements OnInit {
     this.gridView = this.gridData;
     this.elem = document.getElementById('map-grid');
   }
-
+  
   @ViewChild(TooltipDirective) public tooltipDir: TooltipDirective;
   public showTooltip(e: MouseEvent): void {
     const element = e.target as HTMLElement;
@@ -41,7 +41,7 @@ export class MapgridComponent implements OnInit {
   }
 
   @ViewChild(DataBindingDirective) dataBinding: DataBindingDirective;
-  public gridData: any[] = horizdata;
+  public gridData: any[] = mapdata;
   public gridView: any[];
 
   public mySelection: string[] = [];
@@ -89,19 +89,5 @@ export class MapgridComponent implements OnInit {
     }).data;
 
     this.dataBinding.skip = 0;
-  }
-
-  private photoURL(dataItem: any): string {
-    const code: string = dataItem.img_id + dataItem.gender;
-    const image: any = images;
-
-    return image[code];
-  }
-
-  private flagURL(dataItem: any): string {
-    const code: string = dataItem.country;
-    const image: any = images;
-
-    return image[code];
   }
 }
