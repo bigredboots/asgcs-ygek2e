@@ -8,7 +8,7 @@ button.k-button.k-bare.k-button-icon {
 }
 .k-grid-toolbar {
   opacity: 0;
-  transition: $default-transition;
+  transition: 0.5s ease-in all;
 }
 .flipped .k-grid-toolbar {
   justify-content: end;
