@@ -121,6 +121,7 @@
   .left-side-map {
     display: none;
     opacity: 0;
+    transition: none;
   }
   .front {
     transform: rotateY(180deg);
