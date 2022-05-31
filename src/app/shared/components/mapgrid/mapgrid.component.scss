@@ -6,7 +6,11 @@ button.k-button.k-grid-excel,
 button.k-button.k-bare.k-button-icon {
   font-size: 12px;
 }
-
+.k-grid-toolbar {
+  opacity: 0;
+  transition: $default-transition;
+}
 .flipped .k-grid-toolbar {
   justify-content: end;
+  opacity: 1;
 }
